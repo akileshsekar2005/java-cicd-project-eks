@@ -7,7 +7,7 @@ on:
     branches: [master]
 
 env:
-  AWS_REGION: ap-south-1
+  AWS_REGION: ap-south-2
   ECR_REPOSITORY: java-cicd-app
   EKS_CLUSTER: java-cicd-cluster
   K8S_NAMESPACE: java-cicd
