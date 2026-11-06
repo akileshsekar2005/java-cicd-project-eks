@@ -1,0 +1,9 @@
+.git
+.github
+.idea
+.vscode
+target
+k8s
+eks
+scripts
+*.md
