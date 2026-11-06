@@ -2,10 +2,9 @@ name: CI/CD - Build, Scan, Push to ECR, Deploy to EKS
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
-  workflow_dispatch:
+    branches: [master]
 
 env:
   AWS_REGION: ap-south-1
