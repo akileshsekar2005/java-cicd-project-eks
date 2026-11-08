@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: java-cicd-app
-  namespace: java-cicd
+  namespace: default
   labels:
     app: java-cicd-app
 spec:
