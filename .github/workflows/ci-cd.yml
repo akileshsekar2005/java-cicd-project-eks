@@ -54,9 +54,13 @@ jobs:
     needs: [secret-scan, build-test]
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write   # CRITICAL for OIDC
+      contents: read    # CRITICAL for checkout
 
     outputs:
       image: ${{ steps.meta.outputs.image }}
+    
 
     steps:
       - uses: actions/checkout@v4
@@ -94,9 +98,13 @@ jobs:
     needs: docker-push
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write   # CRITICAL for OIDC
+      contents: read    # CRITICAL for checkout
 
     steps:
       - uses: actions/checkout@v4
+    
 
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
