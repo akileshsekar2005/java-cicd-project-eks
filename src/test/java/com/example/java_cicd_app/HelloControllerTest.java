@@ -15,7 +15,7 @@ class HelloControllerTest {
         String result = controller.home();
 
         assertEquals(
-            "Hello, DevOps! Version 1.0",
+            "Hello, DevOps! Version 1.0 .",
             result
         );
     }
